@@ -5,6 +5,7 @@ import edu.cnm.deepdive.diceware.model.dao.PassphraseRepository;
 import edu.cnm.deepdive.diceware.model.entity.Passphrase;
 import edu.cnm.deepdive.diceware.model.entity.Word;
 import edu.cnm.deepdive.diceware.service.PassphraseGenerator;
+import java.util.NoSuchElementException;
 import javax.websocket.server.PathParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -57,7 +58,7 @@ public class DicewareController {
   public Passphrase getPassphrase(@PathVariable long id)  {
     return repository
         .findById(id)
-        .orElseThrow();
+        .orElseThrow(();
   }
 
 }
